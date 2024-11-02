@@ -1,0 +1,39 @@
+syntax = "proto3";
+
+package proto;
+
+service UserService {
+  rpc GetUsers (Empty) returns (UsersResponse) {}
+}
+
+message Empty {}
+
+message UsersResponse {
+  repeated Users users = 1;
+}
+
+message Users {
+  int32 id = 1;
+  string firstName = 2;
+  string lastName = 3;
+  int32 age = 4;
+  string gender = 5;
+  UsersHair hair = 6;
+  string department = 7;
+  UsersAddress address = 8;
+  UsersCompany company = 9;
+}
+
+message UsersHair {
+  string color = 1;
+  string type = 2;
+}
+
+message UsersAddress {
+  string postalCode = 1;
+}
+
+message UsersCompany {
+  string department = 1;
+}
+
