@@ -61,7 +61,7 @@ const ItemButton: React.FC<{
   item: ItemState;
   onClick: () => void;
   variant: "main" | "fruit" | "vegetable";
-}> = ({ item, onClick, variant }) => {
+}> = ({ item, onClick }) => {
   return (
     <button
       onClick={onClick}
